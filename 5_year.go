@@ -49,3 +49,7 @@ func (t Time) LastYear() Time {
 func (t Time) NextYear() Time {
 	return t.AddYear(1)
 }
+
+func (t Time) YearFormat() string {
+	return t.Time.Format(YYYY)
+}

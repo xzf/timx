@@ -30,3 +30,7 @@ func (t Time) LastDay() Time {
 func (t Time) NextDay() Time {
 	return t.AddDay(1)
 }
+
+func (t Time) DayFormat() string {
+	return t.Time.Format(YYYY_MM_DD)
+}

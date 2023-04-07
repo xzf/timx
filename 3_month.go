@@ -47,3 +47,7 @@ func (t Time) LastMonth() Time {
 func (t Time) NextMonth() Time {
 	return t.AddMonth(1)
 }
+
+func (t Time) MonthFormat() string {
+	return t.Time.Format(YYYY_MM)
+}
