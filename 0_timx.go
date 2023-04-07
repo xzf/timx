@@ -23,7 +23,7 @@ func Now() Time {
 	return Time{Time: time.Now()}
 }
 
-func Unix(sec int64, nsec int64) Time {
+func NewUnix(sec int64, nsec int64) Time {
 	return Time{Time: time.Unix(sec, nsec)}
 }
 
