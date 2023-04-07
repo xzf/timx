@@ -19,6 +19,10 @@ func New(t time.Time) Time {
 	return Time{Time: t}
 }
 
+func Now() Time {
+	return Time{Time: time.Now()}
+}
+
 /*
 time.AddDate have some "bug"
 like 2001-03-31 decrease one month will be 2001-03-03 not 2001-02
