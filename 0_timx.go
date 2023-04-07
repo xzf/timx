@@ -23,6 +23,10 @@ func Now() Time {
 	return Time{Time: time.Now()}
 }
 
+func Unix(sec int64, nsec int64) Time {
+	return Time{Time: time.Unix(sec, nsec)}
+}
+
 /*
 time.AddDate have some "bug"
 like 2001-03-31 decrease one month will be 2001-03-03 not 2001-02
