@@ -57,4 +57,8 @@ func Test_All(t *testing.T) {
 	testEqual(obj.AddYear(2).Format(dayFormat) == "2002-01-01", "lvhycakz9e")
 	testEqual(obj.LastYear().Format(dayFormat) == "1999-01-01", "g95e001elp")
 	testEqual(obj.NextYear().Format(dayFormat) == "2001-01-01", "bfilyb36fb")
+
+	startTime, err = time.ParseInLocation("2006-01-02", "2022-12-31", time.UTC)
+	panicIfErr(err, "zzzdqo5hb1")
+	testEqual(New(startTime).MonthEnd().Format(dayFormat) == "2022-12-31", "py91j1q4hf")
 }

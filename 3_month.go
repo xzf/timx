@@ -7,10 +7,9 @@ func (t Time) MonthStart() Time {
 
 func (t Time) MonthEnd() Time {
 	n := 28 - t.Day()
-	if n < 0 {
-		n *= -1
+	if n > 0 {
+		t.Time = t.AddDay(n).Time
 	}
-	t.Time = t.AddDay(n).Time
 	oldMonth := t.Month()
 	for oldMonth == t.Month() {
 		t.Time = t.NextDay().Time
