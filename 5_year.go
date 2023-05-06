@@ -51,5 +51,5 @@ func (t Time) NextYear() Time {
 }
 
 func (t Time) YearFormat() string {
-	return t.Time.Format(YYYY)
+	return t.Time.Format(_YYYY)
 }
